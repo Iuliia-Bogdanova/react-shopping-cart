@@ -1,27 +1,24 @@
 import ButtonDelete from "../ButtonDelete";
 import Count from "../Count";
-import "./style.scss"
+import "./style.scss";
 
-const Product = () => {
+const Product = ({ product, deleteProduct, increase }) => {
+    const { img, title, priceTotal, count, id } = product;
     return (
         <section className="product">
             <div className="product__img">
-            <img src="./img/products/macbook.jpg" alt="Apple MacBook Air 13" />
+            <img src={`./img/products/${img}`} alt={title} />
             </div>
-            <div className="product__title">Apple MacBook Air 13</div>
+            <div className="product__title">{title}</div>
             <div className="product__count">
-
-                <Count />
-            
+                <Count count={count} increase={increase} id={id} />
             </div>
-            <div className="product__price">110 000 руб.</div>
+            <div className="product__price">{priceTotal} руб.</div>
             <div className="product__controls">
-            
-                <ButtonDelete />
-            
+            <ButtonDelete deleteProduct={deleteProduct} id={id} />
             </div>
         </section>
-        );
+    );
     }
     
 export default Product;

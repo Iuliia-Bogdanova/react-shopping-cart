@@ -1,8 +1,8 @@
-import './_vars.scss'
-import "./_reset.scss"
-import "./_base.scss"
+import './_vars.scss';
+import "./_reset.scss";
+import "./_base.scss";
 import "./_section-cart.scss";
-import Title from "../Title"
+import Title from "../Title";
 import Cart from '../Cart';
 
 function App() {
